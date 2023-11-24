@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcular(){
+            var com = parseInt(document.getElementById('n1').value);
+            var lar = parseInt(document.getElementById('n2').value);
+            document.getElementById("Resultado").innerHTML=((com*lar)*36);
+
+            try {
+                if(isNaN(com) || isNaN(lar)) throw  "Valor invalido";
+            } catch (error) {
+                alert(error);
+            }
+        }
+    </script>
+    <form action="" method="post">
+        Digite o comprimento: <input type="text" id="n1"><br><br>
+        Digite a largura: <input type="text" id="n2"><br><br>
+        <input type="button" onclick="calcular()" value="Calcular o dinheiro gasto">
+    </form>
+    <h1 id="Resultado"></h1>
+</body>
+</html>

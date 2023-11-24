@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function calcular(){
+        var sexo=(document.getElementById('n1').value);
+        var alt=parseFloat(document.getElementById('n2').value);
+       
+        if (sexo =="M") {
+            document.getElementById('resultado').innerHTML=((62.1*alt) - 44.7); 
+        }else if(sexo=="H"){
+            document.getElementById('resultado').innerHTML=((72.7*alt) - 58); 
+        }else{
+            alert("Valor invalido")
+        }
+    }
+    </script>
+     <form action="" method="post">
+        Se for mulher digite "M", se for homem digite "H": <input type="text" id="n1"><br><br>
+        Digite sua altura em metros : <input type="text" id="n2"><br><br>
+        <input type="button" onclick="calcular()" value="Calcular o peso ideal">
+    </form>
+    <h1 id="resultado"></h1>
+</body>
+</html>
